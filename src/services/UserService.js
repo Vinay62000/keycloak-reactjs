@@ -9,7 +9,7 @@ const _kc = new Keycloak('/keycloak.json');
  */
 const initKeycloak = (onAuthenticatedCallback) => {
   _kc.init({
-    onLoad: 'check-sso',
+    onLoad: 'login-required',
     silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html',
     pkceMethod: 'S256',
   })
